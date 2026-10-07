@@ -1,6 +1,6 @@
 # Archivieren oder Kassieren
 
-> **Experimenteller Prototyp:** Der Quellcode dieses Spiels entstand im Rahmen eines Experiments mit KI-gestützter Softwareentwicklung („Vibecoding“). Das Projekt dient Test-, Unterrichts- und Anschauungszwecken. Die Fragen sind fachlich nur stichprobenartig geprüft; Fehler und unerwartetes Verhalten sind möglich. Alle Gewinne sind rein virtuell.[^code][^blog]
+> **Experimenteller Prototyp:** Der Quellcode dieses Spiels entstand im Rahmen eines Experiments mit KI-gestützter Softwareentwicklung („Vibecoding“). Das Projekt dient Test-, Unterrichts- und Anschauungszwecken. Die Fragen sind fachlich nur stichprobenartig geprüft; Fehler und unerwartetes Verhalten sind möglich. Alle Gewinne sind rein virtuell.
 
 Ein Browserquiz für Archivarinnen und Archivare: 15 Fragen, vier selbst gewählte Joker und eine Gewinnleiter bis zur virtuellen Million. Das Spiel verbindet Fachwissen aus dem Archivbereich mit der Dramaturgie eines Fernsehquizspiels.
 
@@ -10,7 +10,7 @@ Ein Browserquiz für Archivarinnen und Archivare: 15 Fragen, vier selbst gewähl
 
 ## Für wen ist das Spiel gedacht?
 
-Die im ursprünglichen Prompt genannte Zielgruppe sind Archivarinnen und Archivare. Der Katalog enthält **1.000 Fragen in 17 Kategorien**, etwa Archivwesen, Bestandserhaltung, Diplomatik, Heraldik, Paläographie, Retrodigitalisierung und digitale Langzeitarchivierung.[^blog][^code] Für Unterricht und Selbststudium sollten die Antworten Anlass zum Nachlesen und Diskutieren sein.
+Die im ursprünglichen Prompt genannte Zielgruppe sind Archivarinnen und Archivare. Der Katalog enthält **1.000 Fragen in 17 Kategorien**, etwa Archivwesen, Bestandserhaltung, Diplomatik, Heraldik, Paläographie, Retrodigitalisierung und digitale Langzeitarchivierung. Für Unterricht und Selbststudium sollten die Antworten Anlass zum Nachlesen und Diskutieren sein.
 
 ## Online spielen oder offline starten
 
@@ -20,9 +20,9 @@ Für die Onlineversion genügt der oben verlinkte Spielaufruf. Für eine lokale 
 2. Das ZIP-Archiv entpacken.
 3. Die enthaltene **`index.html`** in einem aktuellen Browser öffnen. JavaScript muss aktiviert sein.
 
-Es sind weder Installation noch Build-Schritt, Paketmanager oder lokaler Webserver erforderlich. HTML, CSS, JavaScript, Logo und Fragenkatalog sind in einer Datei eingebettet. Das Spiel selbst benötigt nach dem Download keine Internetverbindung; die freiwillig geöffneten Quellenlinks zu Fragen verweisen auf externe Websites.[^code]
+Es sind weder Installation noch Build-Schritt, Paketmanager oder lokaler Webserver erforderlich. HTML, CSS, JavaScript, Logo und Fragenkatalog sind in einer Datei eingebettet. Das Spiel selbst benötigt nach dem Download keine Internetverbindung; die freiwillig geöffneten Quellenlinks zu Fragen verweisen auf externe Websites.
 
-Laufende Runde, Bestwert, Toneinstellung und zuletzt verwendete Fragen werden nach Möglichkeit im `localStorage` des Browsers gespeichert. Ohne verfügbaren Browserspeicher bleibt das Spiel spielbar; die dauerhafte Speicherung ist dann eingeschränkt. Onlineversion und lokal geöffnete Datei teilen sich keinen gemeinsamen Spielstand.[^code]
+Laufende Runde, Bestwert, Toneinstellung und zuletzt verwendete Fragen werden nach Möglichkeit im `localStorage` des Browsers gespeichert. Ohne verfügbaren Browserspeicher bleibt das Spiel spielbar; die dauerhafte Speicherung ist dann eingeschränkt. Onlineversion und lokal geöffnete Datei teilen sich keinen gemeinsamen Spielstand.
 
 ## Spielablauf
 
@@ -30,7 +30,7 @@ Laufende Runde, Bestwert, Toneinstellung und zuletzt verwendete Fragen werden na
 2. Eine von vier Antworten markieren. Erst der Button **„Antwort … archivieren“** bestätigt die Auswahl verbindlich.
 3. Nach einer richtigen Antwort die Erläuterung lesen und zur nächsten Frage wechseln. Die 15 Stufen reichen von „Einstieg“ bis „Absurd schwer“; es gibt kein Zeitlimit.
 4. Vor einer verbindlichen Antwort kann die Runde mit **„… kassieren“** beendet werden. Der bis dahin erspielte virtuelle Betrag bleibt erhalten.
-5. Eine falsche Antwort beendet normalerweise die Runde. Ohne passenden Schutzjoker bleibt nur die zuletzt erreichte Sicherheitsstufe; vor der ersten Sicherheitsstufe sind es 0 €.[^code]
+5. Eine falsche Antwort beendet normalerweise die Runde. Ohne passenden Schutzjoker bleibt nur die zuletzt erreichte Sicherheitsstufe; vor der ersten Sicherheitsstufe sind es 0 €.
 
 | Erreichte Stufe | Bedeutung | Virtueller Betrag |
 | --- | --- | ---: |
@@ -38,7 +38,7 @@ Laufende Runde, Bestwert, Toneinstellung und zuletzt verwendete Fragen werden na
 | 10 richtige Antworten | Zweite Sicherheitsstufe | 16.000 € |
 | 15 richtige Antworten | Höchstgewinn | 1.000.000 € |
 
-Der **Bestwert** bezeichnet den höchsten erreichten Zwischenstand. Er kann höher sein als der Betrag am Ende einer verlorenen Runde.[^code]
+Der **Bestwert** bezeichnet den höchsten erreichten Zwischenstand. Er kann höher sein als der Betrag am Ende einer verlorenen Runde.
 
 ![Spielrunde mit Frage, vier Antwortmöglichkeiten, Jokern, Statusanzeige und Gewinnleiter](docs/screenshots/04-spielrunde.jpg)
 
@@ -53,13 +53,13 @@ Der **Bestwert** bezeichnet den höchsten erreichten Zwischenstand. Er kann höh
 | **Zweite Chance** | Muss vor der Antwort aktiviert werden. Nach dem ersten Fehler darf einmal erneut geantwortet werden. Während dieses zweiten Versuchs sind Kassieren und weitere Joker gesperrt. |
 | **Sicherungsvermerk** | Schützt bei einer falschen Antwort den bisherigen Gewinn für die aktuelle Frage. Die Runde endet trotzdem. Der Joker ist nur verfügbar, wenn dieser Gewinn über der bestehenden Sicherheitsstufe liegt. |
 
-Die Wirkungen beziehen sich auf die im Quellcode gespeicherte Lösung, deren fachliche Richtigkeit gesondert zu prüfen ist.[^code]
+Die Wirkungen beziehen sich auf die im Quellcode gespeicherte Lösung, deren fachliche Richtigkeit gesondert zu prüfen ist.
 
 ![Jokerauswahl mit sechs Hilfsmitteln, aus denen vier für die Runde gewählt werden](docs/screenshots/03-jokerauswahl.jpg)
 
 ## Bedienung
 
-Neben Maus und Touch sind Tastenkürzel vorgesehen:[^code]
+Neben Maus und Touch sind Tastenkürzel vorgesehen:
 
 | Taste | Funktion |
 | --- | --- |
@@ -70,27 +70,27 @@ Neben Maus und Touch sind Tastenkürzel vorgesehen:[^code]
 | `J` | Ersten verfügbaren Joker fokussieren |
 | `Tab` / `Umschalt` + `Tab` | Zwischen Bedienelementen wechseln |
 
-**Bekannte Einschränkung:** Die Spielhilfe nennt „Enter archivieren“. Im untersuchten Stand setzt die Antwortauswahl den Fokus jedoch auf den Antwortbutton. Direktes `Enter` wählt diesen erneut aus, statt die Antwort zu bestätigen. Verwende den Archivieren-Button per Klick oder wechsle mit `Tab` zu diesem Button und drücke dort `Enter`.[^review]
+**Bekannte Einschränkung:** Die Spielhilfe nennt „Enter archivieren“. Im untersuchten Stand setzt die Antwortauswahl den Fokus jedoch auf den Antwortbutton. Direktes `Enter` wählt diesen erneut aus, statt die Antwort zu bestätigen. Verwende den Archivieren-Button per Klick oder wechsle mit `Tab` zu diesem Button und drücke dort `Enter`.
 
-Hilfe, Ton und – sofern der Browser es unterstützt – Vollbild sind auch über die obere Leiste erreichbar. Das Layout passt sich kleineren Bildschirmen an. Fokusmarkierungen, ARIA-Beschriftungen und Rücksicht auf reduzierte Animationen sind vorhanden; daraus folgt keine abgeschlossene Prüfung der Barrierefreiheit.[^code]
+Hilfe, Ton und – sofern der Browser es unterstützt – Vollbild sind auch über die obere Leiste erreichbar. Das Layout passt sich kleineren Bildschirmen an. Fokusmarkierungen, ARIA-Beschriftungen und Rücksicht auf reduzierte Animationen sind vorhanden; daraus folgt keine abgeschlossene Prüfung der Barrierefreiheit.
 
 ## Entstehung: ein Vibecoding-Experiment
 
-Das Projekt begleitet den bereitgestellten, unveröffentlichten Blogartikelentwurf **„Erfahrungen mit Vibecoding – Apps fürs Archiv jetzt selbst programmieren lassen“**. Er untersucht, wie weit eine natürlichsprachige Aufgabenbeschreibung trägt. Das Archivquiz dient als überschaubares Anschauungsbeispiel mit begrenztem Funktionsumfang, ohne tiefe Systemintegration und direkt im Browser nutzbar.[^blog]
+Das Projekt begleitet den bereitgestellten, unveröffentlichten Blogartikelentwurf **„Erfahrungen mit Vibecoding – Apps fürs Archiv jetzt selbst programmieren lassen“**. Er untersucht, wie weit eine natürlichsprachige Aufgabenbeschreibung trägt. Das Archivquiz dient als überschaubares Anschauungsbeispiel mit begrenztem Funktionsumfang, ohne tiefe Systemintegration und direkt im Browser nutzbar.
 
-Laut Entwurf wurden zunächst Fragen und ein Logo generiert. Die Fragen lagen für die Entwicklung als XLSX vor. Im hier dokumentierten Repository sind diese Ausgangsdateien nicht separat enthalten; Fragen und Logo stecken in der `index.html`.[^blog][^code]
+Laut Entwurf wurden zunächst Fragen und ein Logo generiert. Die Fragen lagen für die Entwicklung als XLSX vor. Im hier dokumentierten Repository sind diese Ausgangsdateien nicht separat enthalten; Fragen und Logo stecken in der `index.html`.
 
 Ein Auszug aus dem im Entwurf wiedergegebenen Prompt:
 
 > „Tu bitte so, als wärst du ein professioneller Game Designer. Plane ein Spiel, welches komplett mit JavaScript und HTML auskommt und „Archivieren oder Kassieren“ heißen soll und sofort offline heruntergeladen und im Browser gestartet werden kann.“
 
-Weitere Anforderungen waren vier aus sechs Jokern, 15 Schwierigkeitsstufen, Sicherheitsstufen, Fragenkatalog und Logo, eine Hilfe, Soundeffekte und ein Hinweis auf den Testcharakter ohne echte Gewinne.[^blog]
+Weitere Anforderungen waren vier aus sechs Jokern, 15 Schwierigkeitsstufen, Sicherheitsstufen, Fragenkatalog und Logo, eine Hilfe, Soundeffekte und ein Hinweis auf den Testcharakter ohne echte Gewinne.
 
-Laut Entwurf lag nach **32 Minuten und 23 Sekunden** ein Prototyp vor: eine Selbstauskunft zur Entstehung, keine hier nachgemessene Entwicklungszeit und kein Qualitätsnachweis. Der Disclaimer nennt **Tony Franzky** als Initiator des Experiments und bezeichnet das verwendete Modell als **„GPT-5.6. Sol Ultra“**; diese Angaben werden aus dem Disclaimer übernommen.[^blog][^code]
+Laut Entwurf lag nach **32 Minuten und 23 Sekunden** ein Prototyp vor: eine Selbstauskunft zur Entstehung, keine hier nachgemessene Entwicklungszeit und kein Qualitätsnachweis. Der Disclaimer nennt **Tony Franzky** als Initiator des Experiments und bezeichnet das verwendete Modell als **„GPT-5.6. Sol Ultra“**; diese Angaben werden aus dem Disclaimer übernommen.
 
 ## Kurze Codesynopse
 
-Die etwa **4,7 MB große `index.html`** bündelt die gesamte Anwendung. Das eingebettete PNG-Logo trägt wesentlich zur Dateigröße bei. Es gibt kein Framework, Backend oder nachzuladendes JavaScript-Paket.[^code]
+Die etwa **4,7 MB große `index.html`** bündelt die gesamte Anwendung. Das eingebettete PNG-Logo trägt wesentlich zur Dateigröße bei. Es gibt kein Framework, Backend oder nachzuladendes JavaScript-Paket.
 
 | Bestandteil | Aufgabe |
 | --- | --- |
@@ -99,13 +99,13 @@ Die etwa **4,7 MB große `index.html`** bündelt die gesamte Anwendung. Das eing
 | JavaScript | Initialisierung, zentraler Spielzustand, Fragenwahl, Joker, Antwortprüfung und Darstellung |
 | Browser-APIs | `localStorage` für Speicherung, Web Audio API für synthetische Sounds und Fullscreen API für Vollbild |
 
-Ein zentrales `state`-Objekt verwaltet Stufe, Gewinn, Sicherheitsbetrag, Frage, Auswahl und Joker. Funktionen wie `loadQuestion()`, `resolveAnswer()` und `finishRound()` steuern den Ablauf. Die Fragenwahl bevorzugt unverwendete Fragen und einen Kategoriewechsel, soweit passende Einträge vorhanden sind. Die Antwortreihenfolge wird für jede geladene Frage neu gemischt.[^code]
+Ein zentrales `state`-Objekt verwaltet Stufe, Gewinn, Sicherheitsbetrag, Frage, Auswahl und Joker. Funktionen wie `loadQuestion()`, `resolveAnswer()` und `finishRound()` steuern den Ablauf. Die Fragenwahl bevorzugt unverwendete Fragen und einen Kategoriewechsel, soweit passende Einträge vorhanden sind. Die Antwortreihenfolge wird für jede geladene Frage neu gemischt.
 
 Die Ein-Datei-Struktur erleichtert Download und Offlinebetrieb. Für größere Erweiterungen erschwert sie jedoch die getrennte Pflege von Oberfläche, Logik, Daten und Bildmaterial.
 
 ### Fragen bearbeiten
 
-Die Datensätze stehen im JSON-Skriptblock mit der ID `questionData`:[^code]
+Die Datensätze stehen im JSON-Skriptblock mit der ID `questionData`:
 
 | Feld | Inhalt |
 | --- | --- |
@@ -115,13 +115,13 @@ Die Datensätze stehen im JSON-Skriptblock mit der ID `questionData`:[^code]
 | `correct` | Index der richtigen Antwort: `0` bis `3` |
 | `explanation`, `source` | Erläuterung und Quellenadresse |
 
-Antworttexte und Lösungsindex müssen zusammenpassen. Die Stufen 1–5 enthalten jeweils 70 Fragen, die Stufen 6–15 jeweils 65; diese Zuordnung belegt keine empirisch geprüfte Schwierigkeit.[^code]
+Antworttexte und Lösungsindex müssen zusammenpassen. Die Stufen 1–5 enthalten jeweils 70 Fragen, die Stufen 6–15 jeweils 65; diese Zuordnung belegt keine empirisch geprüfte Schwierigkeit.
 
 ## Bekannte Grenzen und Beiträge
 
-Die strukturelle Durchsicht fand 1.000 Datensätze ohne doppelte IDs oder identische Fragetexte. Das bestätigt die Datenform, **nicht die fachliche Richtigkeit**. Der Blogentwurf beschreibt ausdrücklich nur eine stichprobenartige fachliche Prüfung. Die Anzeige „1.000 geprüfte Fragen“ auf der Startseite sollte deshalb nicht als vollständige fachliche Freigabe verstanden werden.[^review][^blog]
+Die strukturelle Durchsicht fand 1.000 Datensätze ohne doppelte IDs oder identische Fragetexte. Das bestätigt die Datenform, **nicht die fachliche Richtigkeit**. Der Blogentwurf beschreibt ausdrücklich nur eine stichprobenartige fachliche Prüfung. Die Anzeige „1.000 geprüfte Fragen“ auf der Startseite sollte deshalb nicht als vollständige fachliche Freigabe verstanden werden.
 
-Ein messbarer Hinweis auf die nötige Überarbeitung: Bei **619 von 1.000 Fragen (61,9 %)** ist die als richtig markierte Antwort nach Zeichenlänge eindeutig die längste der vier Optionen. Das vom Entwurf angesprochene Muster kann Raten erleichtern und bleibt trotz gemischter Antwortpositionen bestehen.[^review]
+Ein messbarer Hinweis auf die nötige Überarbeitung: Bei **619 von 1.000 Fragen (61,9 %)** ist die als richtig markierte Antwort nach Zeichenlänge eindeutig die längste der vier Optionen. Das vom Entwurf angesprochene Muster kann Raten erleichtern und bleibt trotz gemischter Antwortpositionen bestehen.
 
 Hilfreiche Beiträge sind insbesondere:
 
@@ -147,13 +147,3 @@ Die Aufnahmen zeigen verschiedene Ansichten desselben normalen Spieldurchlaufs v
 | Antwortauswertung | [06-antwortauswertung.jpg](docs/screenshots/06-antwortauswertung.jpg) |
 | Rundenabschluss | [07-rundenabschluss.jpg](docs/screenshots/07-rundenabschluss.jpg) |
 | Nutzungs- und Experimenthinweise | [08-disclaimer.jpg](docs/screenshots/08-disclaimer.jpg) |
-
-## Repository und Lizenzstatus
-
-Im untersuchten Ausgangsstand enthält das Repository ausschließlich `index.html`. Diese README und `docs/screenshots/` sind ergänzende Dokumentation. Eine separate `LICENSE`-Datei ist in diesem Stand nicht vorhanden. Diese README vergibt keine zusätzliche Lizenz für Code, Fragen oder Bildmaterial.[^code]
-
-### Dokumentationsgrundlage
-
-[^code]: Untersucht am 07.10.2026: [`index.html`, Commit `b7485fe`](https://github.com/sugob05/archivieren_oder_kassieren.github.io/blob/b7485fe4c75db86f8380d36c14293cf061c3740d/index.html) und [Dateibaum dieses Stands](https://github.com/sugob05/archivieren_oder_kassieren.github.io/tree/b7485fe4c75db86f8380d36c14293cf061c3740d). Der Spielquellcode wurde für diese Dokumentation nicht verändert.
-[^blog]: Vom Projekt bereitgestellter, unveröffentlichter Entwurf „Erfahrungen mit Vibecoding – Apps fürs Archiv jetzt selbst programmieren lassen“, Datei `Vibecoding.txt`. Angaben zum Entwicklungsprozess und die Promptauszüge stammen aus diesem Entwurf; die Datei wird nicht als Bestandteil des Repositorys vorausgesetzt.
-[^review]: Befunde der Quellcodedurchsicht und Browserprüfung am 07.10.2026 für den oben verlinkten Stand. Die Zahl 619 zählt Datensätze, in denen der über `correct` markierte Antworttext nach Zeichenlänge strikt länger als jede der drei anderen Optionen ist; Gleichstände zählen nicht mit. Dies ist eine strukturelle Auswertung und keine vollständige fachliche Kuratierung.
