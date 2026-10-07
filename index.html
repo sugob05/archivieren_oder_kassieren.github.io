@@ -431,6 +431,52 @@ summary:focus-visible {
   font-size: 0.86rem;
 }
 
+/* Hinweise auf dem Startbildschirm */
+.start-disclaimer {
+  width: min(100%, 1180px);
+  margin: 32px auto 0;
+  padding: clamp(18px, 3vw, 30px);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  color: var(--muted);
+  background: rgba(7, 21, 43, 0.65);
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+.start-disclaimer .disclaimer-copy {
+  max-width: 100ch;
+  margin: 0 auto;
+}
+
+.start-disclaimer h2 {
+  margin: 0 0 16px;
+  color: var(--gold);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.4;
+}
+
+.start-disclaimer h3 {
+  margin: 24px 0 8px;
+  color: var(--cream);
+  font-size: 0.96rem;
+  line-height: 1.45;
+}
+
+.start-disclaimer p {
+  margin: 0 0 14px;
+}
+
+.start-disclaimer p:last-child {
+  margin-bottom: 0;
+}
+
+.start-disclaimer strong {
+  color: var(--cream);
+}
+
 .screen-setup {
   max-width: 1120px;
   margin: 0 auto;
@@ -1651,6 +1697,21 @@ summary:focus-visible {
           </article>
         </div>
         <p class="catalog-note"><span id="questionCount">0</span> geprüfte Fragen · 15 Fachstufen · kein Zeitlimit</p>
+
+        <aside id="gameDisclaimer" class="start-disclaimer" aria-labelledby="disclaimerTitle">
+          <div class="disclaimer-copy">
+            <h2 id="disclaimerTitle">Disclaimer – Hinweise zum Spiel</h2>
+            <p>Dieses Spiel wurde ausschließlich zu Test-, Unterrichts- und Anschauungszwecken entwickelt. Es dient der Veranschaulichung sowie der experimentellen Erprobung KI-gestützter Softwareentwicklung.</p>
+            <p><strong>Es kann kein echtes Geld gewonnen werden.</strong> Sämtliche im Spiel dargestellten Geldbeträge, Guthaben und Gewinne sind rein virtuell und dienen ausschließlich der Simulation. Sie haben keinen realen Geldwert und begründen keinen Anspruch auf eine Auszahlung oder einen Umtausch in Geld.</p>
+
+            <h3>KI-Experiment und Entwicklung</h3>
+            <p>Der Quellcode dieses Spiels wurde durch das KI-Modell GPT-5.6. Sol Ultra im Rahmen eines KI-Experiments von Tony Franzky erstellt. Das Spiel ist ein experimentelles Demonstrationsprojekt. Fehler, Fehlfunktionen und unerwartetes Verhalten können daher nicht ausgeschlossen werden.</p>
+
+            <h3>Eigenverantwortliche Nutzung und Haftung</h3>
+            <p>Die Nutzung des Spiels sowie die Verwendung des bereitgestellten Quellcodes erfolgen eigenverantwortlich. Eine fehlerfreie, unterbrechungsfreie oder dauerhaft verfügbare Funktion wird nicht zugesichert.</p>
+            <p>Die Haftung für Schäden, die durch die Nutzung des Spiels oder des Quellcodes entstehen, ist im gesetzlich zulässigen Umfang ausgeschlossen.</p>
+          </div>
+        </aside>
       </section>
 
       <section id="jokerScreen" class="screen screen-setup" aria-labelledby="jokerTitle">
